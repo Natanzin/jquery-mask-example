@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Importa o Jquery-->
+    <script type="text/javascript" src="./jquery-3.6.0.min.js"></script>
+
+    <!--Importa o plugin mask do Jquery-->
+    <script type="text/javascript" src="./jquery.mask.min.js"></script>
+    <title>Mascaras jquery</title>
+</head>
+
+<body>
+    <h1>Exemplo de mascara</h1>
+    <form action="formulario" method="POST">
+        <!--Input CPF-->
+        <label for="cpf">CPF:
+            <input type="text" name="cpf" id="cpf">
+        </label>
+        <br><br>
+        <!--Input CNPJ-->
+        <label for="cnpj">CNPJ:
+            <input type="text" name="cnpj" id="cnpj">
+        </label>
+        <br><br>
+        <!--Input Telefone-->
+        <label for="telefone">Telefone:
+            <input type="text" name="telefone" id="telefone">
+        </label>
+        <br><br>
+        <!--Input Celular-->
+        <label for="celular">Celular:
+            <input type="text" name="celular" id="celular">
+        </label>
+        <br><br>
+        <!--Input Salário-->
+        <label for="salario">Salário:
+            <input type="text" name="salario" id="salario">
+        </label>
+        <br><br>
+        <!--Input CEP-->
+        <label for="cep">CEP:
+            <input type="text" name="cep" id="cep">
+        </label>
+        <br><br>
+        <!--Input data de nascimento-->
+        <label for="dataNascimento">Data de Nascimento:
+            <input type="text" name="dataNascimento" id="dataNascimento">
+        </label>
+        <br><br>
+        <input type="submit" value="Enviar" name="enviar">
+    </form>
+
+    <!--Aplicando as máscaras-->
+    <script type="text/javascript">
+
+        //note que a função aplica a mascara pelo ID do input
+        //EX: $("#id")
+
+        //Aplicando mascara CPF
+        $("#cpf").mask("000.000.000-00")
+        //Aplicando mascara CNPJ
+        $("#cnpj").mask("00.000.000/0000-00")
+        //Aplicando mascara telefone
+        $("#telefone").mask("(00) 0000-0000")
+        //Aplicando mascara celular
+        $("#celular").mask("(00) 0 0000-0000")
+        //Aplicando mascara salário
+        $("#salario").mask("999.999.990,00", { reverse: true })
+        //Aplicando mascara CEP
+        $("#cep").mask("00.000-000")
+        //Aplicando mascara data de nascimento
+        $("#dataNascimento").mask("00/00/0000")
+
+    </script>
+</body>
+
+</html>
